@@ -9,14 +9,12 @@ export function LogoSection1() {
       <div className="container-padding-x container mx-auto">
         <div className="flex flex-col items-center gap-12 md:gap-16">
           <div className="section-title-gap-lg flex max-w-xl flex-col items-center text-center">
-            <Tagline>Logo section</Tagline>
             <h2 className="heading-lg text-foreground">
-              Showcase that builds trust
+              Trusted by Top Guilds and Game Developers
             </h2>
             <p className="text-muted-foreground">
-              Add logos of notable companies using your product. Include 4-6
-              recognizable brands in grayscale to maintain visual consistency.
-              Ensure logos are properly scaled and aligned with equal spacing.
+              Join the ranks of the most successful players, studios, and communities using our platform to level up.
+
             </p>
           </div>
 

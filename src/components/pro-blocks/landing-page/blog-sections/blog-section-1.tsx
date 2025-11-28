@@ -17,36 +17,36 @@ interface BlogPost {
 const BLOG_POSTS: BlogPost[] = [
   {
     id: 1,
-    title: "Getting Started with shadcn/ui: A Complete Guide",
+    title: "Latest Game News",
     description:
-      "Learn how to set up and maximize your development workflow with shadcn/ui's powerful component library.",
+      "Stay up-to-date with the hottest game releases, updates, and industry trends. We cover everything from AAA titles to indie hits!",
     date: "Mar 15, 2024",
     category: "Tutorial",
     image: "https://ui.shadcn.com/placeholder.svg",
   },
   {
     id: 2,
-    title: "Building Dark Mode with Next.js and Tailwind CSS",
+    title: "Pro Gamer Tips",
     description:
-      "Implement a seamless dark mode toggle in your Next.js application using Tailwind CSS and shadcn/ui.",
+      "Level up your skills with expert tips, guides, and walkthroughs. Whether you're a beginner or a pro, we've got strategies for every player.",
     date: "Mar 12, 2024",
     category: "Development",
     image: "https://ui.shadcn.com/placeholder.svg",
   },
   {
     id: 3,
-    title: "Mastering React Server Components",
+    title: "Community Highlights",
     description:
-      "Deep dive into React Server Components and learn how they can improve your application's performance.",
+      "Explore the vibrant world of gaming communities. From fan-made content to player spotlights, discover the best from the players who make the games great.",
     date: "Mar 8, 2024",
     category: "Advanced",
     image: "https://ui.shadcn.com/placeholder.svg",
   },
   {
     id: 4,
-    title: "The Future of Web Development in 2024",
+    title: "Game Reviews & Gear",
     description:
-      "Explore the latest trends and technologies shaping the future of web development this year.",
+      "Check out our in-depth game reviews and gear recommendations. We dive into gameplay, graphics, and performance to help you decide what to play next—and what to play it on.",
     date: "Mar 5, 2024",
     category: "Insights",
     image: "https://ui.shadcn.com/placeholder.svg",
@@ -64,16 +64,14 @@ export function BlogSection1() {
           {/* Section Title */}
           <div className="section-title-gap-lg mx-auto flex max-w-xl flex-col items-center text-center">
             {/* Tagline */}
-            <Tagline>Blog Section</Tagline>
             {/* Main Heading */}
             <h1 id="blog-section-heading" className="heading-lg">
-              Short and clear engaging headline for a blog
+              Master the Game: Tips, Tools, and Strategies for Gamers
             </h1>
             {/* Description */}
             <p className="text-muted-foreground">
-              Add a concise value statement that captures reader interest and
-              previews content value. Focus on benefits while keeping it under
-              two lines. Align with your blog categories.
+              Discover expert advice, in-depth guides, and essential resources to level up your skills, 
+              optimize your gear, and dominate in every game you play.
             </p>
           </div>
 

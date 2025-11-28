@@ -18,8 +18,8 @@ import { VariantProps } from "class-variance-authority";
 const pricingData = {
   plans: [
     {
-      name: "Basic",
-      description: "Perfect for individuals and small projects",
+      name: "Starter",
+      description: "Perfect for solo players and small gaming projects",
       features: [
         {
           name: "Up to 5 team members",
@@ -27,11 +27,11 @@ const pricingData = {
             "Collaborate with up to 5 team members on unlimited projects",
         },
         {
-          name: "10GB storage space",
+          name: "10GB game save and mod storage",
           tooltip: "Secure cloud storage for all your project files and assets",
         },
         {
-          name: "Basic analytics",
+          name: "Basic in-game stats and analytics",
           tooltip: "Access to essential metrics and performance tracking",
         },
       ],
@@ -42,62 +42,62 @@ const pricingData = {
       variant: "secondary",
     },
     {
-      name: "Standard",
-      description: "Ideal for growing teams and businesses",
+      name: "Adventurer",
+      description: "Ideal for growing guilds and teams",
       badge: "Most popular",
       features: [
         {
-          name: "Up to 20 team members",
+          name: "Up to 20 players in your guild",
           tooltip: "Scale your team with expanded collaboration capabilities",
         },
         {
-          name: "50GB storage space",
+          name: "50GB of game storage (saves, mods, DLC)",
           tooltip: "More storage for larger projects and asset libraries",
         },
         {
-          name: "Advanced analytics",
+          name: "Advanced in-game analytics (leaderboards, trends)",
           tooltip: "Detailed insights with custom reporting and dashboards",
         },
         {
-          name: "Priority support",
+          name: "Priority in-game support",
           tooltip: "Get help within 24 hours from our dedicated support team",
         },
       ],
       pricing: {
-        monthly: 49,
+        monthly: 39,
         annually: 490,
       },
       variant: "default",
       highlighted: true,
     },
     {
-      name: "Premium",
+      name: "VIP",
       description: "For large enterprises and advanced needs",
       features: [
         {
-          name: "Unlimited team members",
+          name: "Unlimited party members",
           tooltip: "No limits on team size or collaboration",
         },
         {
-          name: "250GB storage space",
+          name: "250GB of storage for massive worlds and mods",
           tooltip: "Enterprise-grade storage with advanced security",
         },
         {
-          name: "Custom analytics",
+          name: "Custom in-game analytics (custom metrics, player behavior tracking)",
           tooltip: "Tailored analytics solutions with API access",
         },
         {
-          name: "24/7 premium support",
+          name: "24/7 premium support (instant help, VIP queue)",
           tooltip:
             "Round-the-clock dedicated support with 4-hour response time",
         },
         {
-          name: "White-labeling",
+          name: "White-labeling (custom branding for your guild or server)",
           tooltip: "Custom branding and white-label solutions",
         },
       ],
       pricing: {
-        monthly: 99,
+        monthly: 59,
         annually: 990,
       },
       variant: "secondary",
@@ -119,20 +119,16 @@ export function PricingSection1() {
           {/* Section Header */}
           <div className="section-title-gap-lg flex max-w-xl flex-col items-center text-center">
             {/* Category Tag */}
-            <Tagline>Pricing section</Tagline>
             {/* Main Title */}
             <h2
               id="pricing-section-title"
               className="heading-lg text-foreground"
             >
-              Benefit-focused headline that highlights choice
+              Choose Your Power-Up: Plans Tailored to Your Team's Playstyle
             </h2>
             {/* Section Description */}
             <p className="text-muted-foreground text-base">
-              Add a concise value statement that addresses price sensitivity and
-              showcases plan flexibility. Focus on transformation and results
-              while keeping it under 2 lines. Align with your pricing table
-              options.
+              Unlock the right tools for your guild’s growth—whether you're a solo player or managing a massive server—without breaking the bank. Scale up as you level up!
             </p>
           </div>
 
