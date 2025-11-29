@@ -215,7 +215,7 @@ export function PricingSection1() {
                     <p className="text-sm font-medium">
                       {index === 0
                         ? "What's included:"
-                        : `Everything in ${ pricingData.plans[index - 1].name }, plus:`}
+                        : `Everything in this plan, plus:`}
                     </p>
                     <div className="flex flex-col gap-4">
                       {plan.features.map((feature, i) => (
