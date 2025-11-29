@@ -124,11 +124,11 @@ export function PricingSection1() {
               id="pricing-section-title"
               className="heading-lg text-foreground"
             >
-              Choose Your Power-Up: Plans Tailored to Your Team's Playstyle
+              Choose Your Power-Up&colon; Plans Tailored to Your Team&apos;s Playstyle
             </h2>
             {/* Section Description */}
             <p className="text-muted-foreground text-base">
-              Unlock the right tools for your guild’s growth—whether you're a solo player or managing a massive server—without breaking the bank. Scale up as you level up!
+              Unlock the right tools for your guild&apos;s growth—whether you&apos;re a solo player or managing a massive server—without breaking the bank. Scale up as you level up!
             </p>
           </div>
 
