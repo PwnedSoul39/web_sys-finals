@@ -5,7 +5,7 @@ import { Tagline } from "~/components/pro-blocks/landing-page/tagline";
 
 export function LogoSection1() {
   return (
-    <section className="bg-background section-padding-y">
+    <section className="bg-gray-900 section-padding-y">
       <div className="container-padding-x container mx-auto">
         <div className="flex flex-col items-center gap-12 md:gap-16">
           <div className="section-title-gap-lg flex max-w-xl flex-col items-center text-center">
@@ -16,12 +16,6 @@ export function LogoSection1() {
               Join the ranks of the most successful players, studios, and communities using our platform to level up.
 
             </p>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
-            {[...Array(10)].map((_, index) => (
-              <PlaceholderLogo key={index} className="text-foreground" />
-            ))}
           </div>
         </div>
       </div>

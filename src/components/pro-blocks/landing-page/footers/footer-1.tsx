@@ -21,7 +21,7 @@ const LEGAL_LINKS = [
 export function Footer1() {
   return (
     <footer
-      className="bg-background section-padding-y text-sm"
+      className="bg-gray-950 section-padding-y text-sm"
       role="contentinfo"
       aria-label="Site footer"
     >
@@ -59,7 +59,7 @@ export function Footer1() {
           <p className="text-muted-foreground text-center lg:text-left">
             <span>Copyright © {new Date().getFullYear()}</span>{" "}
             <Link href="/" className="hover:underline">
-              shadcndesign.com
+              Gamer Hub
             </Link>
             . All rights reserved.
           </p>

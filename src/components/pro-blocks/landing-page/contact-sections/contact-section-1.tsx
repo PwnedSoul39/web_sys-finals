@@ -11,7 +11,7 @@ import { Tagline } from "~/components/pro-blocks/landing-page/tagline";
 export function ContactSection1() {
   return (
     <section
-      className="bg-background section-padding-y"
+      className="bg-gray-900 section-padding-y"
       aria-labelledby="contact-heading"
     >
       <div className="mx-auto max-w-xl px-6">

@@ -111,7 +111,7 @@ export function PricingSection1() {
   return (
     // Main pricing section container
     <section
-      className="bg-background section-padding-y"
+      className="bg-gray-900 section-padding-y"
       aria-labelledby="pricing-section-title"
     >
       <div className="container-padding-x container mx-auto">
@@ -138,16 +138,16 @@ export function PricingSection1() {
             onValueChange={setBillingPeriod}
             className="w-fit"
           >
-            <TabsList className="bg-muted h-10">
+            <TabsList className="bg-gray-800 h-10">
               <TabsTrigger
                 value="monthly"
-                className="data-[state=active]:bg-background px-3 py-1.5 data-[state=active]:shadow-sm"
+                className="data-[state=active]:bg-gray-700 data-[state=active]:text-white px-3 py-1.5 data-[state=active]:shadow-sm"
               >
                 Monthly
               </TabsTrigger>
               <TabsTrigger
                 value="annually"
-                className="data-[state=active]:bg-background px-3 py-1.5 data-[state=active]:shadow-sm"
+                className="data-[state=active]:bg-gray-700 data-[state=active]:text-white px-3 py-1.5 data-[state=active]:shadow-sm"
               >
                 Annually
               </TabsTrigger>
@@ -159,7 +159,7 @@ export function PricingSection1() {
             {pricingData.plans.map((plan, index) => (
               <Card
                 key={plan.name}
-                className={`rounded-xl p-6 lg:p-8 ${plan.highlighted ? "border-primary border-2" : ""}`}
+                className={`rounded-xl p-6 lg:p-8 bg-neutral-700 ${plan.highlighted ? "border-primary border-2" : ""}`}
               >
                 <CardContent className="flex flex-col gap-8 p-0">
                   {/* Plan Header */}

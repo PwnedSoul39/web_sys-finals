@@ -7,10 +7,9 @@ import { useState } from "react";
 import Link from "next/link";
 
 const MENU_ITEMS = [
-  { label: "Products", href: "#" },
-  { label: "Use cases", href: "#" },
-  { label: "Docs", href: "#" },
-  { label: "Pricing", href: "#" },
+  { label: "Home", href: "#home" },
+  { label: "News", href: "#" },
+  { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#" },
 ] as const;
 
@@ -36,7 +35,7 @@ export function LpNavbar1() {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
-    <nav className="bg-background sticky top-0 isolate z-50 py-3.5 md:py-4">
+    <nav className="bg-gray-950 sticky top-0 isolate z-50 py-3.5 md:py-4 text-white">
       <div className="relative container m-auto flex flex-col justify-between gap-4 px-6 md:flex-row md:items-center md:gap-6">
         <div className="flex items-center justify-between">
           <Link href="/" aria-label="Go to homepage">
@@ -56,7 +55,7 @@ export function LpNavbar1() {
         <div className="hidden w-full flex-row justify-end gap-5 md:flex">
           <NavMenuItems />
           <Link href="#">
-            <Button>Get started</Button>
+            <Button className="bg-lime-400 text-black hover:bg-lime-700 hover:text-white">Get started</Button>
           </Link>
         </div>
 
@@ -65,7 +64,7 @@ export function LpNavbar1() {
           <div className="flex w-full flex-col justify-end gap-5 pb-2.5 md:hidden">
             <NavMenuItems />
             <Link href="#">
-              <Button className="w-full">Get started</Button>
+              <Button className="w-full bg-lime-400 text-black hover:bg-lime-700 hover:text-white">Get started</Button>
             </Link>
           </div>
         )}

@@ -22,7 +22,7 @@ const BLOG_POSTS: BlogPost[] = [
       "Stay up-to-date with the hottest game releases, updates, and industry trends. We cover everything from AAA titles to indie hits!",
     date: "Mar 15, 2024",
     category: "Tutorial",
-    image: "https://ui.shadcn.com/placeholder.svg",
+    image: "/latest_news.jpg",
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const BLOG_POSTS: BlogPost[] = [
       "Level up your skills with expert tips, guides, and walkthroughs. Whether you're a beginner or a pro, we've got strategies for every player.",
     date: "Mar 12, 2024",
     category: "Development",
-    image: "https://ui.shadcn.com/placeholder.svg",
+    image: "/pro_gamer.jpg",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const BLOG_POSTS: BlogPost[] = [
       "Explore the vibrant world of gaming communities. From fan-made content to player spotlights, discover the best from the players who make the games great.",
     date: "Mar 8, 2024",
     category: "Advanced",
-    image: "https://ui.shadcn.com/placeholder.svg",
+    image: "/highlights.jpg",
   },
   {
     id: 4,
@@ -49,14 +49,14 @@ const BLOG_POSTS: BlogPost[] = [
       "Check out our in-depth game reviews and gear recommendations. We dive into gameplay, graphics, and performance to help you decide what to play next—and what to play it on.",
     date: "Mar 5, 2024",
     category: "Insights",
-    image: "https://ui.shadcn.com/placeholder.svg",
+    image: "/game_reviews.jpg",
   },
 ];
 
 export function BlogSection1() {
   return (
     <section
-      className="bg-background section-padding-y"
+      className="bg-gray-900 section-padding-y"
       aria-labelledby="blog-section-heading"
     >
       <div className="container-padding-x container mx-auto gap-10 md:gap-12">

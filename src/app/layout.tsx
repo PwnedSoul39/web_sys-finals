@@ -10,9 +10,9 @@ import { ContactSection1 } from "~/components/pro-blocks/landing-page/contact-se
 import { LogoSection1 } from "~/components/pro-blocks/landing-page/logo-sections/logo-section-1";
 
 export const metadata: Metadata = {
-  title: "Test Site",
-  description: "Website Description",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  title: "Gamer Hub",
+  description: "Your Gaming Hub",
+  icons: [{ rel: "icon", url: "/img/favicon.ico" }],
 };
 
 const geist = Geist({
@@ -24,7 +24,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
+    <html lang="en" className={`${geist.variable} dark`}>
       <body>
         <LpNavbar1 />
         <LogoSection1 />
