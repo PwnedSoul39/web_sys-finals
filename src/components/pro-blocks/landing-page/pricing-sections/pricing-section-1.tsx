@@ -13,7 +13,7 @@ import {
   TooltipProvider,
 } from "~/components/ui/tooltip";
 import { Tagline } from "~/components/pro-blocks/landing-page/tagline";
-import { VariantProps } from "class-variance-authority";
+import type { VariantProps } from "class-variance-authority";
 
 const pricingData = {
   plans: [
@@ -215,7 +215,7 @@ export function PricingSection1() {
                     <p className="text-sm font-medium">
                       {index === 0
                         ? "What's included:"
-                        : `Everything in ${pricingData.plans[index - 1].name}, plus:`}
+                        : `Everything in ${ pricingData.plans[index - 1].name }, plus:`}
                     </p>
                     <div className="flex flex-col gap-4">
                       {plan.features.map((feature, i) => (
