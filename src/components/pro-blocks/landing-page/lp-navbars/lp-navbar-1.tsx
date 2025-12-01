@@ -17,20 +17,20 @@ interface NavMenuItemsProps {
   className?: string;
 }
 
-function scroller(link, label) {
+function scroller() {
   const router = useRouter();
-  const result = () => router.push(link)
+  const clicker = () => {
+    router.push();
+  }
   return (
-    <Button variant="ghost" className="w-full md:w-auto" onClick = {() => router.push(link)}>
-    label
-    </Button>
+    <Button variant="ghost" className="w-full md:w-auto" onClick = {clicker} />
   );
 }
 const NavMenuItems = ({ className }: NavMenuItemsProps) => (
   <div className={`flex flex-col gap-1 md:flex-row ${className ?? ""}`}>
     {MENU_ITEMS.map(({ label, href }) => (
       <Link key={label} href={href} scroll={false}>
-        <Button variant="ghost" className="w-full md:w-auto" onClick = {scroller({href})}>
+        <Button variant="ghost" className="w-full md:w-auto" onClick = {scroller()}>
           {label}
         </Button>
       </Link>
