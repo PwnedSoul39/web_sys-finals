@@ -13,6 +13,7 @@ export function ContactSection1() {
     <section
       className="bg-gray-900 section-padding-y"
       aria-labelledby="contact-heading"
+      id="contact"
     >
       <div className="mx-auto max-w-xl px-6">
         <div className="flex flex-col items-center gap-10 md:gap-12">

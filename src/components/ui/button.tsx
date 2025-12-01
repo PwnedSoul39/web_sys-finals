@@ -40,6 +40,7 @@ function Button({
   className,
   variant,
   size,
+  text,
   asChild = false,
   ...props
 }: React.ComponentProps<"button"> &
@@ -53,6 +54,7 @@ function Button({
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
+      onClick = {text}
     />
   )
 }

@@ -8,9 +8,9 @@ import Link from "next/link";
 
 const MENU_ITEMS = [
   { label: "Home", href: "#home" },
-  { label: "News", href: "#" },
+  { label: "News", href: "#news" },
   { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#" },
+  { label: "Contact", href: "#contact" },
 ] as const;
 
 interface NavMenuItemsProps {
@@ -21,7 +21,7 @@ const NavMenuItems = ({ className }: NavMenuItemsProps) => (
   <div className={`flex flex-col gap-1 md:flex-row ${className ?? ""}`}>
     {MENU_ITEMS.map(({ label, href }) => (
       <Link key={label} href={href}>
-        <Button variant="ghost" className="w-full md:w-auto">
+        <Button variant="ghost" className="w-full md:w-auto" onClick={() => {href}}>
           {label}
         </Button>
       </Link>
@@ -54,7 +54,7 @@ export function LpNavbar1() {
         {/* Desktop Navigation */}
         <div className="hidden w-full flex-row justify-end gap-5 md:flex">
           <NavMenuItems />
-          <Link href="#">
+          <Link href="https://youtu.be/dQw4w9WgXcQ?si=BFNrjVBuN1d1rTJu">
             <Button className="bg-lime-400 text-black hover:bg-lime-700 hover:text-white">Get started</Button>
           </Link>
         </div>
@@ -63,7 +63,7 @@ export function LpNavbar1() {
         {isMenuOpen && (
           <div className="flex w-full flex-col justify-end gap-5 pb-2.5 md:hidden">
             <NavMenuItems />
-            <Link href="#">
+            <Link href="https://youtu.be/dQw4w9WgXcQ?si=BFNrjVBuN1d1rTJu">
               <Button className="w-full bg-lime-400 text-black hover:bg-lime-700 hover:text-white">Get started</Button>
             </Link>
           </div>

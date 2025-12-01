@@ -113,6 +113,7 @@ export function PricingSection1() {
     <section
       className="bg-gray-900 section-padding-y"
       aria-labelledby="pricing-section-title"
+      id="pricing"
     >
       <div className="container-padding-x container mx-auto">
         <div className="flex flex-col items-center gap-10 md:gap-12">

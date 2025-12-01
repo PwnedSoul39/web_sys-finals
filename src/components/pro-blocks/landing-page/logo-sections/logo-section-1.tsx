@@ -5,7 +5,7 @@ import { Tagline } from "~/components/pro-blocks/landing-page/tagline";
 
 export function LogoSection1() {
   return (
-    <section className="bg-gray-900 section-padding-y">
+    <section className="bg-gray-900 section-padding-y" id="home">
       <div className="container-padding-x container mx-auto">
         <div className="flex flex-col items-center gap-12 md:gap-16">
           <div className="section-title-gap-lg flex max-w-xl flex-col items-center text-center">
