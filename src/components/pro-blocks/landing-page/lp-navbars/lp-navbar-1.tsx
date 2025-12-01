@@ -20,7 +20,7 @@ interface NavMenuItemsProps {
 const NavMenuItems = ({ className }: NavMenuItemsProps) => (
   <div className={`flex flex-col gap-1 md:flex-row ${className ?? ""}`}>
     {MENU_ITEMS.map(({ label, href }) => (
-      <Link key={label} href={href} scroll={true}>
+      <Link key={label} href={href} scroll={false} passHref>
         <Button variant="ghost" className="w-full md:w-auto">
           {label}
         </Button>
@@ -38,7 +38,7 @@ export function LpNavbar1() {
     <nav className="bg-gray-950 sticky top-0 isolate z-50 py-3.5 md:py-4 text-white">
       <div className="relative container m-auto flex flex-col justify-between gap-4 px-6 md:flex-row md:items-center md:gap-6">
         <div className="flex items-center justify-between">
-          <Link href="/" aria-label="Go to homepage">
+          <Link href="#" aria-label="Go to homepage">
             <Logo className="size-7" />
           </Link>
           <Button
