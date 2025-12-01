@@ -2,25 +2,35 @@
 import { Logo } from "~/components/pro-blocks/logo";
 import { Button } from "~/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { useRouter } from 'next/navigation';
 import Link from "next/link";
 
 const MENU_ITEMS = [
-  { label: "Home", href: "/#home" },
-  { label: "News", href: "/#news" },
-  { label: "Pricing", href: "/#pricing" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Home", href: "#home" },
+  { label: "News", href: "#news" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Contact", href: "#contact" },
 ] as const;
 
 interface NavMenuItemsProps {
   className?: string;
 }
 
+function scroller(link, label) {
+  const router = useRouter();
+  const result = () => router.push(link)
+  return (
+    <Button variant="ghost" className="w-full md:w-auto" onClick = {() => router.push(link)}>
+    label
+    </Button>
+  );
+}
 const NavMenuItems = ({ className }: NavMenuItemsProps) => (
   <div className={`flex flex-col gap-1 md:flex-row ${className ?? ""}`}>
     {MENU_ITEMS.map(({ label, href }) => (
       <Link key={label} href={href} scroll={false}>
-        <Button variant="ghost" className="w-full md:w-auto">
+        <Button variant="ghost" className="w-full md:w-auto" onClick = {scroller({href})}>
           {label}
         </Button>
       </Link>
