@@ -3,40 +3,44 @@ import { Logo } from "~/components/pro-blocks/logo";
 import { Button } from "~/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useRef } from "react";
-import { useRouter } from 'next/navigation';
 import Link from "next/link";
 
 const MENU_ITEMS = [
   { label: "Home", href: "#home" },
-  { label: "News", href: "#news" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+{ label: "News", href: "#news" },
+{ label: "Pricing", href: "#pricing" },
+{ label: "Contact", href: "#contact" },
 ] as const;
 
 interface NavMenuItemsProps {
   className?: string;
 }
 
-function scroller() {
-  const router = useRouter();
-  const clicker = () => {
-    router.push();
-  }
+const NavMenuItems = ({ className }: NavMenuItemsProps) => {
+  const scrollToSection = (href: string) => {
+    // Get the target element
+    const targetElement = document.querySelector(href);
+    if (targetElement) {
+      // Scroll to the element with smooth behavior
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
-    <Button variant="ghost" className="w-full md:w-auto" onClick = {clicker} />
-  );
-}
-const NavMenuItems = ({ className }: NavMenuItemsProps) => (
-  <div className={`flex flex-col gap-1 md:flex-row ${className ?? ""}`}>
+    <div className={`flex flex-col gap-1 md:flex-row ${className ?? ""}`}>
     {MENU_ITEMS.map(({ label, href }) => (
-      <Link key={label} href={href} scroll={false}>
-        <Button variant="ghost" className="w-full md:w-auto" onClick = {scroller()}>
-          {label}
-        </Button>
-      </Link>
+      <Button
+      key={label}
+      variant="ghost"
+      className="w-full md:w-auto"
+      onClick={() => scrollToSection(href)} // Call scrollToSection function
+      >
+      {label}
+      </Button>
     ))}
-  </div>
-);
+    </div>
+  );
+};
 
 export function LpNavbar1() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,39 +49,39 @@ export function LpNavbar1() {
 
   return (
     <nav className="bg-gray-950 sticky top-0 isolate z-50 py-3.5 md:py-4 text-white">
-      <div className="relative container m-auto flex flex-col justify-between gap-4 px-6 md:flex-row md:items-center md:gap-6">
-        <div className="flex items-center justify-between">
-          <Link href="/" aria-label="Go to homepage">
-            <Logo className="size-7" />
-          </Link>
-          <Button
-            variant="ghost"
-            className="flex size-9 items-center justify-center md:hidden"
-            onClick={toggleMenu}
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          >
-            {isMenuOpen ? <X /> : <Menu />}
-          </Button>
-        </div>
+    <div className="relative container m-auto flex flex-col justify-between gap-4 px-6 md:flex-row md:items-center md:gap-6">
+    <div className="flex items-center justify-between">
+    <Link href="/" aria-label="Go to homepage">
+    <Logo className="size-7" />
+    </Link>
+    <Button
+    variant="ghost"
+    className="flex size-9 items-center justify-center md:hidden"
+    onClick={toggleMenu}
+    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+    >
+    {isMenuOpen ? <X /> : <Menu />}
+    </Button>
+    </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden w-full flex-row justify-end gap-5 md:flex">
-          <NavMenuItems />
-          <Link href="https://youtu.be/dQw4w9WgXcQ?si=BFNrjVBuN1d1rTJu">
-            <Button className="bg-lime-400 text-black hover:bg-lime-700 hover:text-white">Get started</Button>
-          </Link>
-        </div>
+    {/* Desktop Navigation */}
+    <div className="hidden w-full flex-row justify-end gap-5 md:flex">
+    <NavMenuItems />
+    <Link href="https://youtu.be/dQw4w9WgXcQ?si=BFNrjVBuN1d1rTJu">
+    <Button className="bg-lime-400 text-black hover:bg-lime-700 hover:text-white">Get started</Button>
+    </Link>
+    </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="flex w-full flex-col justify-end gap-5 pb-2.5 md:hidden">
-            <NavMenuItems />
-            <Link href="https://youtu.be/dQw4w9WgXcQ?si=BFNrjVBuN1d1rTJu">
-              <Button className="w-full bg-lime-400 text-black hover:bg-lime-700 hover:text-white">Get started</Button>
-            </Link>
-          </div>
-        )}
+    {/* Mobile Navigation */}
+    {isMenuOpen && (
+      <div className="flex w-full flex-col justify-end gap-5 pb-2.5 md:hidden">
+      <NavMenuItems />
+      <Link href="https://youtu.be/dQw4w9WgXcQ?si=BFNrjVBuN1d1rTJu">
+      <Button className="w-full bg-lime-400 text-black hover:bg-lime-700 hover:text-white">Get started</Button>
+      </Link>
       </div>
+    )}
+    </div>
     </nav>
   );
 }
