@@ -27,6 +27,7 @@ export default function RootLayout({
     <html lang="en" className={`${geist.variable} dark`}>
       <body>
         <LpNavbar1 />
+        { children }
         <LogoSection1 />
         <hr />
         <BlogSection1 />

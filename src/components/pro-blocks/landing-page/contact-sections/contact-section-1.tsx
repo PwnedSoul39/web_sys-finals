@@ -6,7 +6,6 @@ import { Textarea } from "~/components/ui/textarea";
 import { Checkbox } from "~/components/ui/checkbox";
 import { Field, FieldGroup, FieldLabel, FieldSet } from "~/components/ui/field";
 import Link from "next/link";
-import { Tagline } from "~/components/pro-blocks/landing-page/tagline";
 
 export function ContactSection1() {
   return (

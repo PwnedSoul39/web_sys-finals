@@ -3,7 +3,6 @@
 import { AspectRatio } from "~/components/ui/aspect-ratio";
 import Image from "next/image";
 import Link from "next/link";
-import { Tagline } from "~/components/pro-blocks/landing-page/tagline";
 
 interface BlogPost {
   id: number;

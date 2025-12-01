@@ -12,7 +12,6 @@ import {
   TooltipTrigger,
   TooltipProvider,
 } from "~/components/ui/tooltip";
-import { Tagline } from "~/components/pro-blocks/landing-page/tagline";
 import type { VariantProps } from "class-variance-authority";
 
 const pricingData = {

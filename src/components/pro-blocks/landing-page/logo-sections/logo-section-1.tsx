@@ -1,7 +1,7 @@
 "use client";
 
 import { PlaceholderLogo } from "~/components/pro-blocks/placeholder-logo"; /* Make sure to import your logos */
-import { Tagline } from "~/components/pro-blocks/landing-page/tagline";
+
 
 export function LogoSection1() {
   return (
